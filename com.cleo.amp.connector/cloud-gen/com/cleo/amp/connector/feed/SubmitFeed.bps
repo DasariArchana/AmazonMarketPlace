@@ -1,0 +1,25 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.feed;
+
+def bps SubmitFeed {
+
+	def execute(StorageNode returnValue, StorageNode requestBody, String marketplaceId, String contentMD5Value,
+	String documentType, String amazonOrderId, String feedType, Boolean purgeAndReplace) {
+
+		step {
+			new com.cleo.amp.connector.feed.SubmitFeed$executeSubmitFeedClient().execute(returnValue, requestBody,
+				marketplaceId, contentMD5Value, documentType, amazonOrderId, feedType, purgeAndReplace)
+		} next : end 
+	}
+
+	def callJava executeSubmitFeedClient {
+
+		def execute(StorageNode returnValue, StorageNode requestBody, String marketplaceId, String contentMD5Value,
+		String documentType, String amazonOrderId, String feedType, Boolean purgeAndReplace) {
+			javaClassName = "com.cleo.amp.connector.feed.SubmitFeedClient"
+			javaMethodName = "com.extol.storage.IStorageID execute(com.extol.storage.IStorageID, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean)"
+		}
+
+	}
+
+}

@@ -1,0 +1,22 @@
+#content/*bps 2 */
+package com.cleo.amp.connector;
+
+def bps SetVaultEntryAlias {
+
+	def execute(java.lang.Void returnValue, String arg0) {
+
+		step {
+			new com.cleo.amp.connector.SetVaultEntryAlias$executeSetVaultEntryAliasClient().execute(returnValue, arg0)
+		} next : end 
+	}
+
+	def callJava executeSetVaultEntryAliasClient {
+
+		def execute(java.lang.Void returnValue, String arg0) {
+			javaClassName = "com.cleo.amp.connector.SetVaultEntryAliasClient"
+			javaMethodName = "void execute(java.lang.String)"
+		}
+
+	}
+
+}

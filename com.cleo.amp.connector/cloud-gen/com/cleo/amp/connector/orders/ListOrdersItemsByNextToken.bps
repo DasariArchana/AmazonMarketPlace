@@ -1,0 +1,23 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.orders;
+
+def bps ListOrdersItemsByNextToken {
+
+	def execute(StorageNode returnValue, String nextToken) {
+
+		step {
+			new com.cleo.amp.connector.orders.ListOrdersItemsByNextToken$executeListOrdersItemsByNextTokenClient().
+				execute(returnValue, nextToken)
+		} next : end 
+	}
+
+	def callJava executeListOrdersItemsByNextTokenClient {
+
+		def execute(StorageNode returnValue, String nextToken) {
+			javaClassName = "com.cleo.amp.connector.orders.ListOrdersItemsByNextTokenClient"
+			javaMethodName = "com.extol.storage.IStorageID execute(java.lang.String)"
+		}
+
+	}
+
+}

@@ -1,0 +1,25 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.feed;
+
+def bps CancelFeedSubmissions {
+
+	def execute(StorageNode returnValue, String feedProcessingStatusList, String feedTypeList, String submittedToDate,
+	String submittedFromDate) {
+
+		step {
+			new com.cleo.amp.connector.feed.CancelFeedSubmissions$executeCancelFeedSubmissionsClient().execute(
+				returnValue, feedProcessingStatusList, feedTypeList, submittedToDate, submittedFromDate)
+		} next : end 
+	}
+
+	def callJava executeCancelFeedSubmissionsClient {
+
+		def execute(StorageNode returnValue, String feedProcessingStatusList, String feedTypeList, String submittedToDate,
+		String submittedFromDate) {
+			javaClassName = "com.cleo.amp.connector.feed.CancelFeedSubmissionsClient"
+			javaMethodName = "com.extol.storage.IStorageID execute(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"
+		}
+
+	}
+
+}

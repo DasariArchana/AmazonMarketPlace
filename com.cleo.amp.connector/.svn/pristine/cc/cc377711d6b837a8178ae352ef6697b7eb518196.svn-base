@@ -1,0 +1,9 @@
+package com.cleo.amp.connector.feed ;
+
+def jsonSchema SubmitFeedRequest {
+	field SubmitFeedRequest$InputStream ;
+
+	def InputStream {
+	}
+
+}

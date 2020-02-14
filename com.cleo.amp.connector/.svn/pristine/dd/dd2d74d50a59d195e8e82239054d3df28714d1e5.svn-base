@@ -1,0 +1,27 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.orders;
+
+def bps ListOrderItems {
+
+	def execute(StorageNode result, String amazonOrderId) {
+		var String returnValue
+
+		step {
+			new com.cleo.amp.connector.orders.ListOrderItems$executeListOrderItemsSDK().execute(returnValue,
+				amazonOrderId)
+		} next : end 
+		step {
+			new ConvertStringToStorageNode().execute(returnValue, result)
+		} next : end 
+	}
+
+	def callJava executeListOrderItemsSDK {
+
+		def execute(String returnValue, String amazonOrderId) {
+			javaClassName = "com.cleo.mws.service.OrderService"
+			javaMethodName = "java.lang.String listOrderItems(java.lang.String)"
+		}
+
+	}
+
+}

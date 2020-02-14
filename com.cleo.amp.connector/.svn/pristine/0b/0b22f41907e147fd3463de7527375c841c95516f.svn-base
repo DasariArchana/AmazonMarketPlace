@@ -1,0 +1,23 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.feed;
+
+def bps GetFeedSubmissionListByNextToken {
+
+	def execute(StorageNode returnValue) {
+
+		step {
+			new com.cleo.amp.connector.feed.GetFeedSubmissionListByNextToken$executeGetFeedSubmissionListByNextTokenClient().
+				execute(returnValue)
+		} next : end 
+	}
+
+	def callJava executeGetFeedSubmissionListByNextTokenClient {
+
+		def execute(StorageNode returnValue) {
+			javaClassName = "com.cleo.amp.connector.feed.GetFeedSubmissionListByNextTokenClient"
+			javaMethodName = "com.extol.storage.IStorageID execute()"
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.feed;
+
+def bps GetFeedSubmissionResult {
+
+	def execute(StorageNode returnValue, String feedSubmissionId) {
+
+		step {
+			new com.cleo.amp.connector.feed.GetFeedSubmissionResult$executeGetFeedSubmissionResultClient().execute(
+				returnValue, feedSubmissionId)
+		} next : end 
+	}
+
+	def callJava executeGetFeedSubmissionResultClient {
+
+		def execute(StorageNode returnValue, String feedSubmissionId) {
+			javaClassName = "com.cleo.amp.connector.feed.GetFeedSubmissionResultClient"
+			javaMethodName = "com.extol.storage.IStorageID execute(java.lang.String)"
+		}
+
+	}
+
+}

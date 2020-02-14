@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="lib/com.extol.ebi.runtime.rest.services.schemas_5.0.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/com.extol.ebi.runtime.rest.services_5.0.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax-inject.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jersey-hk2-2.28.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jersey-media-jaxb-2.28.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jersey-common-2.28.jar" sourcepath="C:/Users/ajain/.m2/repository/javax/ws/rs/javax.ws.rs-api"/>
+	<classpathentry exported="true" kind="lib" path="lib/jersey-server-2.28.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/MWSClientJavaRuntime-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/MWSOrders_2013-09-01_v2018-10-31.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-codec-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang3-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-logging-api-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hk2-api-2.5.0-b30.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hk2-locator-2.5.0-b30.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hk2-utils-2.5.0-b30.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpclient-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/httpcore-4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/tomcat-coyote.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="**/*.migrationresult|**/*.fileAdapter|**/*.ftpAdapter|**/*.appInterface|**/*.appRoute|**/*.bps|**/*.codeTable|**/*.ediEnveloper|**/*.inboundEdi|**/*.outboundEdi|**/*.controlNumber|**/*.datagroup|**/*.dataSource|**/*.dbAdapter|**/*.event|**/*.fileMonitor|**/*.formula|**/*.externalApi|**/*.rulesetDataObject|**/*.globalVar|**/*.monitor|**/*.msgFilter|**/*.ediSchema|**/*.dbSchema|**/*.ffSchema|**/*.ssSchema|**/*.xmlSchema|**/*.nextNumber|**/*.portal|**/*.ruleset|**/*.sched|**/*.sqlAccess|**/*.tradingPartner|**/*.tfSettings|**/*.conversionmanager|**/*.dbMonitor|**/*.wsProvider|**/*.wsConsumer|**/*.bpsDiagram|**/*.adapter|**/*.objSchema|**/*.jsonSchema" kind="src" path="src"/>
+	<classpathentry kind="src" path="ext"/>
+	<classpathentry excluding="**/*.migrationresult|**/*.fileAdapter|**/*.ftpAdapter|**/*.appInterface|**/*.appRoute|**/*.bps|**/*.codeTable|**/*.ediEnveloper|**/*.inboundEdi|**/*.outboundEdi|**/*.controlNumber|**/*.datagroup|**/*.dataSource|**/*.dbAdapter|**/*.event|**/*.fileMonitor|**/*.formula|**/*.externalApi|**/*.rulesetDataObject|**/*.globalVar|**/*.monitor|**/*.msgFilter|**/*.ediSchema|**/*.dbSchema|**/*.ffSchema|**/*.ssSchema|**/*.xmlSchema|**/*.nextNumber|**/*.portal|**/*.ruleset|**/*.sched|**/*.sqlAccess|**/*.tradingPartner|**/*.tfSettings|**/*.conversionmanager|**/*.dbMonitor|**/*.wsProvider|**/*.wsConsumer|**/*.bpsDiagram|**/*.adapter|**/*.objSchema|**/*.jsonSchema" kind="src" path="ebi-gen"/>
+	<classpathentry excluding="**/*.migrationresult|**/*.fileAdapter|**/*.ftpAdapter|**/*.appInterface|**/*.appRoute|**/*.bps|**/*.codeTable|**/*.ediEnveloper|**/*.inboundEdi|**/*.outboundEdi|**/*.controlNumber|**/*.datagroup|**/*.dataSource|**/*.dbAdapter|**/*.event|**/*.fileMonitor|**/*.formula|**/*.externalApi|**/*.rulesetDataObject|**/*.globalVar|**/*.monitor|**/*.msgFilter|**/*.ediSchema|**/*.dbSchema|**/*.ffSchema|**/*.ssSchema|**/*.xmlSchema|**/*.nextNumber|**/*.portal|**/*.ruleset|**/*.sched|**/*.sqlAccess|**/*.tradingPartner|**/*.tfSettings|**/*.conversionmanager|**/*.dbMonitor|**/*.wsProvider|**/*.wsConsumer|**/*.bpsDiagram|**/*.adapter|**/*.objSchema|**/*.jsonSchema" kind="src" path="cloud-gen"/>
+	<classpathentry exported="true" kind="lib" path="api/Client.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

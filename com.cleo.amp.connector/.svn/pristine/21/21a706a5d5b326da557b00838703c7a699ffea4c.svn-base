@@ -1,0 +1,22 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.orders;
+
+def bps GetServiceStatus {
+
+	def execute(StorageNode returnValue) {
+
+		step {
+			new com.cleo.amp.connector.orders.GetServiceStatus$executeGetServiceStatusClient().execute(returnValue)
+		} next : end 
+	}
+
+	def callJava executeGetServiceStatusClient {
+
+		def execute(StorageNode returnValue) {
+			javaClassName = "com.cleo.amp.connector.orders.GetServiceStatusClient"
+			javaMethodName = "com.extol.storage.IStorageID execute()"
+		}
+
+	}
+
+}

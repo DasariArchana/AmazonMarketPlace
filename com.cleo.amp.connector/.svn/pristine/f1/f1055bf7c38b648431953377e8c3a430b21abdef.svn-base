@@ -1,0 +1,107 @@
+package com.cleo.amp.connector.orders ;
+
+def jsonSchema GetOrderResponse {
+	field GetOrderResponse$GetOrderResponse ;
+
+	def Address {
+		Name String ;
+		AddressLine1 String ;
+		AddressLine2 String ;
+		AddressLine3 String ;
+		City String ;
+		County String ;
+		District String ;
+		StateOrRegion String ;
+		Municipality String ;
+		PostalCode String ;
+		CountryCode String ;
+		Phone String ;
+		AddressType String ;
+	}
+
+	def Money {
+		CurrencyCode String ;
+		Amount String ;
+	}
+
+	def PaymentExecutionDetailItem {
+		Payment GetOrderResponse$Money ;
+	}
+
+	def TaxClassification {
+		Name String ;
+		Value String ;
+	}
+
+	def BuyerTaxInfo {
+		CompanyLegalName String ;
+		TaxingRegion String ;
+		TaxClassifications GetOrderResponse$TaxClassification [] ;
+	}
+
+	def Order {
+		AmazonOrderId String ;
+		SellerOrderId String ;
+		PurchaseDate String ;
+		LastUpdateDate String ;
+		OrderStatus String ;
+		FulfillmentChannel String ;
+		SalesChannel String ;
+		OrderChannel String ;
+		ShipServiceLevel String ;
+		ShippingAddress GetOrderResponse$Address ;
+		OrderTotal GetOrderResponse$Money ;
+		NumberOfItemsShipped Number ;
+		NnumberOfItemsUnshipped Number ;
+		PaymentExecutionDetail GetOrderResponse$PaymentExecutionDetailItem [] ;
+		PaymentMethod String ;
+		PaymentMethodDetails String [] ;
+		MarketplaceId String ;
+		BuyerEmail String ;
+		BuyerName String ;
+		BuyerCounty String ;
+		BuyerTaxInfo GetOrderResponse$BuyerTaxInfo ;
+		ShipmentServiceLevelCategory String ;
+		ShippedByAmazonTFM Boolean ;
+		TFMShipmentStatus String ;
+		EasyShipShipmentStatus String ;
+		CbaDisplayableShippingLabel String ;
+		OrderType String ;
+		EarliestShipDate String ;
+		LatestShipDate String ;
+		EarliestDeliveryDate String ;
+		LatestDeliveryDate String ;
+		IsBusinessOrder Boolean ;
+		PurchaseOrderNumber String ;
+		IsPrime Boolean ;
+		IsPremiumOrder Boolean ;
+		ReplacedOrderId String ;
+		IsReplacementOrder Boolean ;
+		PromiseResponseDueDate String ;
+		IsEstimatedShipDateSet Boolean ;
+	}
+
+	def GetOrderResult {
+		Orders GetOrderResponse$Order [] ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def GetOrderResponse {
+		GetOrderResult GetOrderResponse$GetOrderResult ;
+		ResponseMetadata GetOrderResponse$ResponseMetadata ;
+		ResponseHeaderMetadata GetOrderResponse$ResponseHeaderMetadata ;
+	}
+
+}

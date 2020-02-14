@@ -1,0 +1,29 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.orders;
+
+def bps ListOrders {
+
+	def execute(StorageNode returnValue, Long maxResultsPerPage, String easyShipShipmentStatus, String buyerEmail,
+	String orderStatus, String lastUpdatedAfter, String createdAfter, String lastUpdatedBefore, String marketplaceId,
+	String fulfillmentChannel, String tFMShipmentStatus, String paymentMethod, String createdBefore, String sellerOrderId) {
+
+		step {
+			new com.cleo.amp.connector.orders.ListOrders$executeListOrdersClient().execute(returnValue,
+				maxResultsPerPage, easyShipShipmentStatus, buyerEmail, orderStatus, lastUpdatedAfter, createdAfter,
+				lastUpdatedBefore, marketplaceId, fulfillmentChannel, tFMShipmentStatus, paymentMethod, createdBefore,
+				sellerOrderId)
+		} next : end 
+	}
+
+	def callJava executeListOrdersClient {
+
+		def execute(StorageNode returnValue, Long maxResultsPerPage, String easyShipShipmentStatus, String buyerEmail,
+		String orderStatus, String lastUpdatedAfter, String createdAfter, String lastUpdatedBefore, String marketplaceId,
+		String fulfillmentChannel, String tFMShipmentStatus, String paymentMethod, String createdBefore, String sellerOrderId) {
+			javaClassName = "com.cleo.amp.connector.orders.ListOrdersClient"
+			javaMethodName = "com.extol.storage.IStorageID execute(java.lang.Long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"
+		}
+
+	}
+
+}

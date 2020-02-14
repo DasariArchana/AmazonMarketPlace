@@ -1,0 +1,29 @@
+package com.cleo.amp.connector.feed ;
+
+def jsonSchema GetFeedSubmissionCountResponse {
+	field GetFeedSubmissionCountResponse$GetFeedSubmissionCountResponse ;
+
+	def GetFeedSubmissionCountResult {
+		Count Number ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def GetFeedSubmissionCountResponse {
+		GetFeedSubmissionCountResult GetFeedSubmissionCountResponse$GetFeedSubmissionCountResult ;
+		ResponseMetadata GetFeedSubmissionCountResponse$ResponseMetadata ;
+		ResponseHeaderMetadata GetFeedSubmissionCountResponse$ResponseHeaderMetadata ;
+	}
+
+}

@@ -1,0 +1,37 @@
+package com.cleo.amp.connector.orders ;
+
+def jsonSchema GetServiceStatusResponse {
+	field GetServiceStatusResponse$GetServiceStatusResponse ;
+
+	def Message {
+		Locale String ;
+		Text String ;
+	}
+
+	def GetServiceStatusResult {
+		Status String ;
+		Timestamp String ;
+		MessageId String ;
+		Messages GetServiceStatusResponse$Message [] ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def GetServiceStatusResponse {
+		GetServiceStatusResult GetServiceStatusResponse$GetServiceStatusResult ;
+		ResponseMetadata GetServiceStatusResponse$ResponseMetadata ;
+		ResponseHeaderMetadata GetServiceStatusResponse$ResponseHeaderMetadata ;
+	}
+
+}

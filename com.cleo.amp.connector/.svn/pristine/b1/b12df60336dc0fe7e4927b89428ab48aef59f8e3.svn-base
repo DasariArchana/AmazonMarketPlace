@@ -1,0 +1,40 @@
+package com.cleo.amp.connector.feed ;
+
+def jsonSchema GetFeedSubmissionListResponse {
+	field GetFeedSubmissionListResponse$GetFeedSubmissionListResponse ;
+
+	def FeedSubmissionInfo {
+		FeedSubmissionId String ;
+		FeedType String ;
+		SubmittedDate String ;
+		FeedProcessingStatus String ;
+		DtartedProcessingDate String ;
+		CompletedProcessingDate String ;
+	}
+
+	def GetFeedSubmissionListResult {
+		NextToken String ;
+		HasNext Boolean ;
+		FeedSubmissionInfo GetFeedSubmissionListResponse$FeedSubmissionInfo [] ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def GetFeedSubmissionListResponse {
+		GetFeedSubmissionListResult GetFeedSubmissionListResponse$GetFeedSubmissionListResult ;
+		ResponseMetadata GetFeedSubmissionListResponse$ResponseMetadata ;
+		ResponseHeaderMetadata GetFeedSubmissionListResponse$ResponseHeaderMetadata ;
+	}
+
+}

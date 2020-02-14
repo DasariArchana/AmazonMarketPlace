@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.cleo.amp.connector; singleton:=true
+Export-Package: com.cleo.amp.connector,com.cleo.amp.connector.feed,com
+ .cleo.amp.connector.orders
+Bundle-Name: com.cleo.amp.connector
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: api/Client.jar,
+ .,
+ lib/MWSClientJavaRuntime-1.0.jar,
+ lib/MWSOrders_2013-09-01_v2018-10-31.jar,
+ lib/commons-codec-1.6.jar,
+ lib/commons-lang3-3.2.1.jar,
+ lib/commons-logging-api-1.1.1.jar,
+ lib/hk2-api-2.5.0-b30.jar,
+ lib/hk2-locator-2.5.0-b30.jar,
+ lib/hk2-utils-2.5.0-b30.jar,
+ lib/httpclient-4.2.3.jar,
+ lib/httpcore-4.2.jar,
+ lib/javax.ws.rs-api-2.0.1.jar,
+ lib/osgi-resource-locator-1.0.1.jar,
+ lib/tomcat-coyote.jar,
+ lib/validation-api-1.1.0.Final.jar,
+ lib/jersey-common-2.28.jar,
+ lib/jersey-server-2.28.jar,
+ lib/jersey-hk2-2.28.jar,
+ lib/jersey-media-jaxb-2.28.jar,
+ lib/javax-inject.jar,
+ lib/com.extol.ebi.runtime.rest.services.schemas_5.0.0.0.jar,
+ lib/com.extol.ebi.runtime.rest.services_5.0.0.0.jar
+Require-Bundle: com.cleo.clarify5.projectdependencies;bundle-version="[5.0.0,6.0.0)",
+ com.extol.ebi.api.customconnector.core;bundle-version="[5.0.0,6.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Cleo
+Eclipse-BundleShape: dir
+

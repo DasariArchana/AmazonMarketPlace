@@ -1,0 +1,99 @@
+package com.cleo.amp.connector.orders ;
+
+def jsonSchema ListOrdersItemsResponse {
+	field ListOrdersItemsResponse$ListOrderItemsResponse ;
+
+	def ProductInfoDetail {
+		NumberOfItems Number ;
+	}
+
+	def Money {
+		CurrencyCode String ;
+		Amount String ;
+	}
+
+	def PointsGrantedDetail {
+		PointsNumber Number ;
+		PointsMonetaryValue ListOrdersItemsResponse$Money ;
+	}
+
+	def InvoiceData {
+		InvoiceRequirement String ;
+		BuyerSelectedInvoiceCategory String ;
+		InvoiceTitle String ;
+		InvoiceInformation String ;
+	}
+
+	def BuyerCustomizedInfoDetail {
+		CustomizedURL String ;
+	}
+
+	def TaxCollection {
+		Model String ;
+		ResponsibleParty String ;
+	}
+
+	def OrderItem {
+		ASIN String ;
+		SellerSKU String ;
+		OrderItemId String ;
+		Title String ;
+		QuantityOrdered Number ;
+		QuantityShipped Number ;
+		ProductInfo ListOrdersItemsResponse$ProductInfoDetail ;
+		PointsGranted ListOrdersItemsResponse$PointsGrantedDetail ;
+		ItemPrice ListOrdersItemsResponse$Money ;
+		ShippingPrice ListOrdersItemsResponse$Money ;
+		GiftWrapPrice ListOrdersItemsResponse$Money ;
+		ItemTax ListOrdersItemsResponse$Money ;
+		ShippingTax ListOrdersItemsResponse$Money ;
+		GiftWrapTax ListOrdersItemsResponse$Money ;
+		ShippingDiscount ListOrdersItemsResponse$Money ;
+		ShippingDiscountTax ListOrdersItemsResponse$Money ;
+		PromotionDiscount ListOrdersItemsResponse$Money ;
+		PromotionDiscountTax ListOrdersItemsResponse$Money ;
+		PromotionIds String [] ;
+		CODFee ListOrdersItemsResponse$Money ;
+		CODFeeDiscount ListOrdersItemsResponse$Money ;
+		IsGift Boolean ;
+		GiftMessageText String ;
+		GiftWrapLevel String ;
+		InvoiceData ListOrdersItemsResponse$InvoiceData ;
+		ConditionNote String ;
+		ConditionId String ;
+		ConditionSubtypeId String ;
+		ScheduledDeliveryStartDate String ;
+		ScheduledDeliveryEndDate String ;
+		PriceDesignation String ;
+		BuyerCustomizedInfo ListOrdersItemsResponse$BuyerCustomizedInfoDetail ;
+		TaxCollection ListOrdersItemsResponse$TaxCollection ;
+		SerialNumberRequired Boolean ;
+		IsTransparency Boolean ;
+	}
+
+	def ListOrderItemsResult {
+		NextToken String ;
+		AmazonOrderId String ;
+		OrderItems ListOrdersItemsResponse$OrderItem [] ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def ListOrderItemsResponse {
+		ListOrderItemsResult ListOrdersItemsResponse$ListOrderItemsResult ;
+		ResponseMetadata ListOrdersItemsResponse$ResponseMetadata ;
+		ResponseHeaderMetadata ListOrdersItemsResponse$ResponseHeaderMetadata ;
+	}
+
+}

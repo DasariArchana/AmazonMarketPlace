@@ -1,0 +1,22 @@
+#content/*bps 2 */
+package com.cleo.amp.connector.orders;
+
+def bps GetOrder {
+
+	def execute(StorageNode returnValue, String amazonOrderIds) {
+
+		step {
+			new com.cleo.amp.connector.orders.GetOrder$executeGetOrderClient().execute(returnValue, amazonOrderIds)
+		} next : end 
+	}
+
+	def callJava executeGetOrderClient {
+
+		def execute(StorageNode returnValue, String amazonOrderIds) {
+			javaClassName = "com.cleo.amp.connector.orders.GetOrderClient"
+			javaMethodName = "com.extol.storage.IStorageID execute(java.lang.String)"
+		}
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.cleo.amp.connector.feed ;
+
+def jsonSchema CancelFeedSubmissionsResponse {
+	field CancelFeedSubmissionsResponse$CancelFeedSubmissionsResponse ;
+
+	def FeedSubmissionInfo {
+		FeedSubmissionId String ;
+		FeedType String ;
+		SubmittedDate String ;
+		FeedProcessingStatus String ;
+		DtartedProcessingDate String ;
+		CompletedProcessingDate String ;
+	}
+
+	def CancelFeedSubmissionsResult {
+		Count Number ;
+		FeedSubmissionInfo CancelFeedSubmissionsResponse$FeedSubmissionInfo [] ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def CancelFeedSubmissionsResponse {
+		CancelFeedSubmissionsResult CancelFeedSubmissionsResponse$CancelFeedSubmissionsResult ;
+		ResponseMetadata CancelFeedSubmissionsResponse$ResponseMetadata ;
+		ResponseHeaderMetadata CancelFeedSubmissionsResponse$ResponseHeaderMetadata ;
+	}
+
+}

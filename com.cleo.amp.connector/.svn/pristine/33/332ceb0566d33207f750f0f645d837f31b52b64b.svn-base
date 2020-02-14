@@ -1,0 +1,99 @@
+package com.cleo.amp.connector.orders ;
+
+def jsonSchema ListOrdersItemsByNextTokenResponse {
+	field ListOrdersItemsByNextTokenResponse$ListOrderItemsByNextTokenResponse ;
+
+	def ProductInfoDetail {
+		NumberOfItems Number ;
+	}
+
+	def Money {
+		CurrencyCode String ;
+		Amount String ;
+	}
+
+	def PointsGrantedDetail {
+		PointsNumber Number ;
+		PointsMonetaryValue ListOrdersItemsByNextTokenResponse$Money ;
+	}
+
+	def InvoiceData {
+		InvoiceRequirement String ;
+		BuyerSelectedInvoiceCategory String ;
+		InvoiceTitle String ;
+		InvoiceInformation String ;
+	}
+
+	def BuyerCustomizedInfoDetail {
+		CustomizedURL String ;
+	}
+
+	def TaxCollection {
+		Model String ;
+		ResponsibleParty String ;
+	}
+
+	def OrderItem {
+		ASIN String ;
+		SellerSKU String ;
+		OrderItemId String ;
+		Title String ;
+		QuantityOrdered Number ;
+		QuantityShipped Number ;
+		ProductInfo ListOrdersItemsByNextTokenResponse$ProductInfoDetail ;
+		PointsGranted ListOrdersItemsByNextTokenResponse$PointsGrantedDetail ;
+		ItemPrice ListOrdersItemsByNextTokenResponse$Money ;
+		ShippingPrice ListOrdersItemsByNextTokenResponse$Money ;
+		GiftWrapPrice ListOrdersItemsByNextTokenResponse$Money ;
+		ItemTax ListOrdersItemsByNextTokenResponse$Money ;
+		ShippingTax ListOrdersItemsByNextTokenResponse$Money ;
+		GiftWrapTax ListOrdersItemsByNextTokenResponse$Money ;
+		ShippingDiscount ListOrdersItemsByNextTokenResponse$Money ;
+		ShippingDiscountTax ListOrdersItemsByNextTokenResponse$Money ;
+		PromotionDiscount ListOrdersItemsByNextTokenResponse$Money ;
+		PromotionDiscountTax ListOrdersItemsByNextTokenResponse$Money ;
+		PromotionIds String [] ;
+		CODFee ListOrdersItemsByNextTokenResponse$Money ;
+		CODFeeDiscount ListOrdersItemsByNextTokenResponse$Money ;
+		IsGift Boolean ;
+		GiftMessageText String ;
+		GiftWrapLevel String ;
+		InvoiceData ListOrdersItemsByNextTokenResponse$InvoiceData ;
+		ConditionNote String ;
+		ConditionId String ;
+		ConditionSubtypeId String ;
+		ScheduledDeliveryStartDate String ;
+		ScheduledDeliveryEndDate String ;
+		PriceDesignation String ;
+		BuyerCustomizedInfo ListOrdersItemsByNextTokenResponse$BuyerCustomizedInfoDetail ;
+		TaxCollection ListOrdersItemsByNextTokenResponse$TaxCollection ;
+		SerialNumberRequired Boolean ;
+		IsTransparency Boolean ;
+	}
+
+	def ListOrderItemsByNextTokenResult {
+		NextToken String ;
+		AmazonOrderId String ;
+		OrderItems ListOrdersItemsByNextTokenResponse$OrderItem [] ;
+	}
+
+	def ResponseMetadata {
+		RequestId String ;
+	}
+
+	def ResponseHeaderMetadata {
+		responseContext String [] ;
+		timestamp String ;
+		quotaMax Number ;
+		quotaRemaining Number ;
+		quotaResetsAt String ;
+		RequestId String ;
+	}
+
+	def ListOrderItemsByNextTokenResponse {
+		ListOrderItemsByNextTokenResult ListOrdersItemsByNextTokenResponse$ListOrderItemsByNextTokenResult ;
+		ResponseMetadata ListOrdersItemsByNextTokenResponse$ResponseMetadata ;
+		ResponseHeaderMetadata ListOrdersItemsByNextTokenResponse$ResponseHeaderMetadata ;
+	}
+
+}
